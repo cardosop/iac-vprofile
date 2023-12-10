@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Checkout source code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup terraform
         uses: hashicorp/setup-terraform@v2
@@ -58,6 +58,6 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
         
-      - name: Terraform apply
-        id: apply
-        run: terraform apply  
+      #- name: Terraform apply
+      #  id: apply
+      #  run: terraform apply  
